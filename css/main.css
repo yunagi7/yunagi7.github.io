@@ -1901,7 +1901,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #17ffff;
+  background: #98e3c1;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3161,7 +3161,7 @@ ul.breadcrumb li+li:last-child {
 }
 @media screen and (min-width: 1200px) {
   body {
-    background-image: url("https://yunagi7.github.io/images/Back.jpg");
+    background-image: url("../images/Back.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
