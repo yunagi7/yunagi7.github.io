@@ -19,8 +19,8 @@
         <category>Language</category>
       </categories>
       <tags>
-        <tag>Japanese</tag>
         <tag>Original</tag>
+        <tag>Japanese</tag>
       </tags>
   </entry>
   <entry>
@@ -53,9 +53,9 @@
         <category>Language</category>
       </categories>
       <tags>
-        <tag>Japanese</tag>
-        <tag>Arabic</tag>
         <tag>Dictation</tag>
+        <tag>Arabic</tag>
+        <tag>Japanese</tag>
       </tags>
   </entry>
   <entry>
@@ -66,8 +66,8 @@
         <category>Language</category>
       </categories>
       <tags>
-        <tag>Arabic</tag>
         <tag>Dictation</tag>
+        <tag>Arabic</tag>
       </tags>
   </entry>
 </search>
