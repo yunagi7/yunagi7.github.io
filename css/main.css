@@ -1901,7 +1901,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffbf39;
+  background: #123873;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -1995,7 +1995,6 @@ img:hover {
 .post-toc .nav-item {
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
   line-height: 1.8;
 }
 .post-toc .nav .nav-child {
@@ -3165,9 +3164,6 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-position: 50% 50%;
-}
-.header-inner {
-  opacity: 0.9;
 }
 .main-inner {
   opacity: 0.9;

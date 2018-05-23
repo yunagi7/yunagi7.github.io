@@ -261,7 +261,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives 文章列表<span class="badge">6</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives 文章列表<span class="badge">8</span></a>
   </li>
         
         
@@ -2375,7 +2375,7 @@
 	<div>
 		<div>
     
-        <div style="text-align:center;color: #F08080;font-size:14px;">-------------------------<i class="fa fa-bell"></i> The following is a wasteland without any knowledge.-------------------------</div>
+        <div style="text-align:center;color: #F08080;font-size:14px;">---<i class="fa fa-bell"></i> The following is a wasteland without any knowledge.---</div>
     
 </div>
 	</div>
@@ -2416,8 +2416,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Computer/hello-world/" rel="prev" title="A Quick Start on My Blog Creating">
-                A Quick Start on My Blog Creating <i class="fa fa-chevron-right"></i>
+              <a href="/Life/Phd-in-UK/" rel="prev" title="英国PhD浅谈">
+                英国PhD浅谈 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -2499,7 +2499,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -2653,7 +2653,7 @@
     
       <span class="post-meta-item-text">Symbols Count: </span>
     
-    <span title="Symbols Count">32k</span>
+    <span title="Symbols Count">60k</span>
   
 
   
@@ -2664,7 +2664,7 @@
     
       <span class="post-meta-item-text">Reading Time &asymp;</span>
     
-    <span title="Reading Time">58 mins.</span>
+    <span title="Reading Time">1:false</span>
   
 </div>
 
@@ -2925,6 +2925,19 @@
       $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
 
       
+        // ref: https://github.com/ForbesLindesay/unescape-html
+        var unescapeHtml = function(html) {
+          return String(html)
+            .replace(/&quot;/g, '"')
+            .replace(/&#39;/g, '\'')
+            .replace(/&#x3A;/g, ':')
+            // replace all the other &#x; chars
+            .replace(/&#(\d+);/g, function (m, p) { return String.fromCharCode(p); })
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>')
+            .replace(/&amp;/g, '&');
+        };
+      
 
       $.ajax({
         url: path,
@@ -2959,6 +2972,8 @@
                 var title = data.title.trim();
                 var titleInLowerCase = title.toLowerCase();
                 var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                content = unescapeHtml(content);
                 
                 var contentInLowerCase = content.toLowerCase();
                 var articleUrl = decodeURIComponent(data.url);
@@ -3085,7 +3100,7 @@
 
                   // select top N slices in content
 
-                  var upperBound = parseInt('2');
+                  var upperBound = parseInt('-1');
                   if (upperBound >= 0) {
                     slicesOfContent = slicesOfContent.slice(0, upperBound);
                   }
